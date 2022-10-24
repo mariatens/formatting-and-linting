@@ -9,17 +9,17 @@
  * @param {string} n - string to count occurrences off
  * @returns {number} how many occurrences of the string are in the array
  */
-function x(y, n) {
-  let x2 = 0;
-  for (let mars of y) {
-    if ((n == mars)) {
-      x2++;
+function countWords(strArr, str) {
+  let count = 0;
+  for (let word of strArr) {
+    if ((word == str)) {
+      count++;
     }
   }
-  return x2;
+  return count;
 }
 
-console.log(x(["na", "na", "na", "na", "BATMAN"], "na"), 4);
-console.log(x(["na", "na", "na", "na", "BATMAN"], "BATMAN"), 1);
-console.log(x(["na", "na", "na", "na", "BATMAN"], "batman"), 0);
-console.log(x(["na", "na", "na", "na", "BATMAN"], "a"), 0);
+console.log(countWords(["na", "na", "na", "na", "BATMAN"], "na"), 4);
+console.log(countWords(["na", "na", "na", "na", "BATMAN"], "BATMAN"), 1);
+console.log(countWords(["na", "na", "na", "na", "BATMAN"], "batman"), 0);
+console.log(countWords(["na", "na", "na", "na", "BATMAN"], "a"), 0);
